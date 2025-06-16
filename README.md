@@ -90,7 +90,7 @@ flowchart LR
     F --> G[User]
     style A fill:#f9f,stroke:#333,stroke-width:1px
     style B fill:#bbf,stroke:#333,stroke-width:1px
-    style C fill:#bfb,stroke:#333,stroke-width:1px
+    style C fill:#5a995a,stroke:#333,stroke-width:1px
     style D fill:#ffb,stroke:#333,stroke-width:1px
     style E fill:#bff,stroke:#333,stroke-width:1px
     style F fill:#fbf,stroke:#333,stroke-width:1px

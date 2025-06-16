@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTN MoMo Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="MTN.png" alt="MTN Logo" class="logo">
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-menu-container">
+                <ul class="sidebar-menu">
+                    <li class="active"><a href="index.html"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div id="dashboard-content">
+                <div class="dashboard-container">
+                    <header class="dashboard-header">
+                        <h1>MoMo Transaction Analysis</h1>
+                        <div class="controls">
+                            <div class="search-box">
+                                <input type="text" id="search-input" placeholder="Search transactions...">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="filters">
+                                <select id="type-filter">
+                                    <option value="">All Types</option>
+                                    <option>Incoming Money</option>
+                                    <option>Bank Deposits</option>
+                                    <option>Bank Transfers</option>
+                                    <option>Airtime Bill Payments</option>
+                                    <option>Internet and Voice Bundle Purchases</option>
+                                    <option>Cash Power Bill Payments</option>
+                                    <option>Payments to Code Holders</option>
+                                    <option>Transactions Initiated by Third Parties</option>
+                                    <option>Withdrawals from Agents</option>
+                                    <option>Other</option>
+                                </select>
+                                <input type="date" id="date-filter">
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="metrics">
+                        <div class="metric-card">
+                            <h3>Total Transactions</h3>
+                            <p id="total-transactions">1,600</p>
+                            <div class="metric-trend">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>12% from last month</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Total Volume</h3>
+                            <p id="total-volume">405.3M RWF</p>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Top Category</h3>
+                            <div class="top-category">
+                                <span>Payments</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                                <span>45% of total</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="charts">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h3>Transaction Type Distribution</h3>
+                                <div class="chart-period">
+                                    <button id="daily-btn" class="active">Daily</button>
+                                    <button id="weekly-btn">Weekly</button>
+                                    <button id="monthly-btn">Monthly</button>
+                                </div>
+                            </div>
+                            <canvas id="type-chart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h3>Monthly Summary</h3>
+                            </div>
+                            <canvas id="monthly-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Transaction Details Panel (updated version without hidden class) -->
+                    <div id="transaction-details-panel" class="transaction-details-panel">
+                        <div class="transaction-details-content">
+                            <div class="transaction-header">
+                                <h3>Transaction Details</h3>
+                                <button class="close-btn">&times;</button>
+                            </div>
+                            <div class="transaction-body">
+                                <!-- Details will be inserted here by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transactions">
+                        <div class="transactions-header">
+                            <h3>Recent Transactions</h3>
+                            <div class="transaction-actions">
+                                <button id="export-btn">Export</button>
+                            </div>
+                        </div>
+                        <table id="transactions-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactions-body">
+                                <!-- Filled by JavaScript -->
+                            </tbody>
+                        </table>
+                        <div class="show-more-container">
+                            <button id="show-more-btn">Show More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

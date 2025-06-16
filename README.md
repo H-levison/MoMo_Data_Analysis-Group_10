@@ -4,7 +4,7 @@
 This project analyzes and visualizes MTN Mobile Money (MoMo) SMS transaction data. It parses raw SMS data, categorizes transactions, stores them in a database, and provides an interactive dashboard for insights.
 
 ## Video Presentation
-Watch video here - 
+Watch video here - [Youtube](https://youtu.be/HrZHUSeEhL8?si=IJihqCP2E2ZlPgPT)
 
 ## Features
 - Parses and cleans SMS transaction data
@@ -67,12 +67,12 @@ You can download the transaction database from [here](https://github.com/H-levis
    This creates `parsed_sms_data.json`.
 3. Load data into SQLite:
    ```bash
-   python backend/save_to_db.py
+   python save_to_db.py
    ```
    This creates `transactions.db`.
 4. Start the API server:
    ```bash
-   python backend/api.py
+   python api.py
    ```
 
 ### Frontend

@@ -1,4 +1,4 @@
-# Contributors
+# AUTHORS
 
 - Noel Igor Ishimwe
 - Rwema Gisa

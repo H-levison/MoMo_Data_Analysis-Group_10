@@ -3,6 +3,9 @@
 ## Overview
 This project analyzes and visualizes MTN Mobile Money (MoMo) SMS transaction data. It parses raw SMS data, categorizes transactions, stores them in a database, and provides an interactive dashboard for insights.
 
+## Video Presentation
+Watch video here - 
+
 ## Features
 - Parses and cleans SMS transaction data
 - Categorizes transactions (Incoming Money, Transfers, Bill Payments, etc.)
@@ -45,7 +48,7 @@ The `transactions` table in SQLite is designed to capture all relevant fields fo
 - **Constraints:** NOT NULL constraints on key fields, and a UNIQUE constraint on (`datetime`, `raw_text`) to prevent duplicates.
 
 ## Database Link
-You can download the transaction database from [here](https://github.com/yourusername/MoMo_Data_Analysis/raw/main/backend/transactions.db).
+You can download the transaction database from [here](https://github.com/H-levison/MoMo_Data_Analysis-Group_10/blob/c0fc4598044a17b9005b4a97a0202bb465dd7c23/backend/transactions.db).
 
 ## Setup Instructions
 ### Clone the Repository
@@ -88,13 +91,13 @@ flowchart LR
     D --> E[Flask API]
     E --> F[Frontend Dashboard]
     F --> G[User]
-    style A fill:#f9f,stroke:#333,stroke-width:1px
-    style B fill:#bbf,stroke:#333,stroke-width:1px
+    style A fill:#333300,stroke:#333,stroke-width:1px
+    style B fill:#003333,stroke:#333,stroke-width:1px
     style C fill:#5a995a,stroke:#333,stroke-width:1px
-    style D fill:#ffb,stroke:#333,stroke-width:1px
-    style E fill:#bff,stroke:#333,stroke-width:1px
-    style F fill:#fbf,stroke:#333,stroke-width:1px
-    style G fill:#fff,stroke:#333,stroke-width:1px
+    style D fill:#330033,stroke:#333,stroke-width:1px
+    style E fill:#000000,stroke:#333,stroke-width:1px
+    style F fill:#330033,stroke:#333,stroke-width:1px
+    style G fill:#000033,stroke:#333,stroke-width:1px
 ```
 
 ## API Endpoints
@@ -171,8 +174,8 @@ To test the system end-to-end:
 5. **Error Handling:**
    - Stop the backend and confirm the frontend shows an error message when it cannot fetch data.
 
-## Contributors
-See list of contributors in CONTRIBUTORS.md file
+## Authors
+See list of authors in AUTHORS.md file
 
 ## License
 MIT License 
